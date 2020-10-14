@@ -26,5 +26,10 @@ server.listen(PORT, err => {
     console.log(`listening on port http://localhost:${PORT}`);
 });
 
+app.get('/users', getAllUsers); // get all users
+app.post('/users', createUser); // create a new user
+app.put('/users', updateUser); // update a user
+app.delete('/users', deleteUser); // delete a user
+
 
 
