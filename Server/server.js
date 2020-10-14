@@ -3,27 +3,28 @@
 // import usersRoutes from './routes/user.js';
 
 const express = require('express');
-const app = express();
+const server = express();
 const PORT = process.env.port || 4000;
+
+const loginController = require('./Controller/loginController') 
 
 // sådan at vi bruger alle routerne i Users filen, så når folk besøger dem kører routerne
 // app.use('/users', usersRoutes)
 // et API endpint, vores basic route, med en get request til vores homepage '/', efterfulgt af 
 
-app.get("/", (req, res) => {
+server.get("/", (req, res) => {
    res.send('hej')
 });
-app.get("/test", (req, res) => {
+server.get("/test", (req, res) => {
     res.json({'test' : "kæmpe test"})
  })
 
- // vil gerne have User og de tre krav ind her
+ //vil gerne have User og de tre krav ind her
 // vi lytter på porten
 
-app.listen(PORT, err => {
-    if (err) {
-        return console.log("ERROR", err);
-    }
+server.listen(PORT, err => {
     console.log(`listening on port http://localhost:${PORT}`);
 });
+
+
 

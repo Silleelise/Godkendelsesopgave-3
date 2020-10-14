@@ -31,7 +31,7 @@ class freeUser extends User { //definerer en ny klasse der hedder freeUser og ex
 class img {
     constructor(fileName, uploadDate){
         this.fileName = fileName;
-        this.uploadName;
+        this.uploadDate = uploadDate;
     }
 
 }

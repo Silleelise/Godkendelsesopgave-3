@@ -7,4 +7,3 @@ xhttp.send();
 var storage = multer.diskStorage({
   destination
 })
-
