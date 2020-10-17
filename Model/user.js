@@ -1,4 +1,4 @@
-class User { //definerer en klasse og kalder den USer
+class User { //definerer en klasse og kalder den User
     constructor(name, gender, birthday, email, interest, city, password){ //tilføjer attributter 
     this.name = name;
     this.gender = gender;
@@ -31,8 +31,15 @@ class freeUser extends User { //definerer en ny klasse der hedder freeUser og ex
 class img {
     constructor(fileName, uploadDate){
         this.fileName = fileName;
-        this.uploadName;
+        this.uploadDate = uploadDate;
     }
 
 }
+
+class match{
+    constructor(user1, user2){
+    this.user1 = user1;
+    this.user2 = user2;
+}}
+
 module.exports = User;
